@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 9
 Title ""
-Date "4 feb 2014"
+Date "5 feb 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,16 +45,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 10500 2200 0    60   Input ~ 0
-Power+
-Text HLabel 10500 2400 0    60   Input ~ 0
-Power-
+Text HLabel 10500 2200 0    60   Output ~ 0
+FAN_OUT+
+Text HLabel 10500 2400 0    60   Output ~ 0
+FAN_OUT-
 Text HLabel 10350 2800 0    60   Input ~ 0
-Tach
+TACH_IN
 Text HLabel 1350 3300 0    60   Output ~ 0
-Tach_out
+TACH_MEAS
 Text HLabel 1350 2700 0    60   Input ~ 0
-Fan_in
+FAN_EN_N
 $Comp
 L LM324 U?
 U 1 1 52F0A102
@@ -188,7 +188,7 @@ F 3 "" H 3000 1850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 1400 2900 0    60   Output ~ 0
-Current Measure
+CURR_MEAS
 $Comp
 L R R?
 U 1 1 52F0A4C6
