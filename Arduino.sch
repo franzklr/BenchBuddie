@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 9
+Sheet 9 9
 Title ""
-Date "6 feb 2014"
+Date "7 feb 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,7 +45,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 6750 4400 2    60   Output ~ 0
+Text HLabel 7100 4400 2    60   Output ~ 0
 RELAY+
 Text HLabel 9450 4150 2    60   Output ~ 0
 RELAY-
@@ -55,10 +55,10 @@ Text HLabel 7150 2400 2    60   Input ~ 0
 MISO
 Text HLabel 7150 2000 2    60   Output ~ 0
 SCLK
-Text HLabel 7150 2600 2    60   Output ~ 0
+Text HLabel 7100 3200 2    60   Output ~ 0
 DAC_CS_N
-Text HLabel 6750 4600 2    60   Output ~ 0
-FAN_EN_N
+Text HLabel 7150 2600 2    60   Output ~ 0
+FAN_PWM
 Text HLabel 2200 4200 0    60   Input ~ 0
 TACH_MEAS
 Text HLabel 2200 4000 0    60   Input ~ 0
@@ -66,23 +66,23 @@ CURR_MEAS
 $Comp
 L R R?
 U 1 1 52F2D1B0
-P 6250 4600
-F 0 "R?" V 6330 4600 40  0000 C CNN
-F 1 "R" V 6257 4601 40  0000 C CNN
-F 2 "~" V 6180 4600 30  0000 C CNN
-F 3 "~" H 6250 4600 30  0000 C CNN
-	1    6250 4600
+P 6400 2600
+F 0 "R?" V 6480 2600 40  0000 C CNN
+F 1 "R" V 6407 2601 40  0000 C CNN
+F 2 "~" V 6330 2600 30  0000 C CNN
+F 3 "~" H 6400 2600 30  0000 C CNN
+	1    6400 2600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
 U 1 1 52F2D1CF
-P 6250 4400
-F 0 "R?" V 6330 4400 40  0000 C CNN
-F 1 "R" V 6257 4401 40  0000 C CNN
-F 2 "~" V 6180 4400 30  0000 C CNN
-F 3 "~" H 6250 4400 30  0000 C CNN
-	1    6250 4400
+P 6400 4400
+F 0 "R?" V 6480 4400 40  0000 C CNN
+F 1 "R" V 6407 4401 40  0000 C CNN
+F 2 "~" V 6330 4400 30  0000 C CNN
+F 3 "~" H 6400 4400 30  0000 C CNN
+	1    6400 4400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -191,22 +191,14 @@ $EndComp
 $Comp
 L R R?
 U 1 1 52F349E0
-P 6400 2600
-F 0 "R?" V 6480 2600 40  0000 C CNN
-F 1 "R" V 6407 2601 40  0000 C CNN
-F 2 "~" V 6330 2600 30  0000 C CNN
-F 3 "~" H 6400 2600 30  0000 C CNN
-	1    6400 2600
+P 6400 3200
+F 0 "R?" V 6480 3200 40  0000 C CNN
+F 1 "R" V 6407 3201 40  0000 C CNN
+F 2 "~" V 6330 3200 30  0000 C CNN
+F 3 "~" H 6400 3200 30  0000 C CNN
+	1    6400 3200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6000 4400 5650 4400
-Wire Wire Line
-	6750 4400 6500 4400
-Wire Wire Line
-	6750 4600 6500 4600
-Wire Wire Line
-	6000 4600 5650 4600
 Wire Wire Line
 	2200 4000 2550 4000
 Wire Wire Line
@@ -230,15 +222,11 @@ Wire Wire Line
 Wire Wire Line
 	5650 2400 6150 2400
 Wire Wire Line
-	6150 2600 5650 2600
-Wire Wire Line
 	6650 2000 7150 2000
 Wire Wire Line
 	7150 2200 6650 2200
 Wire Wire Line
 	6650 2400 7150 2400
-Wire Wire Line
-	7150 2600 6650 2600
 $Comp
 L R R?
 U 1 1 52F34A8B
@@ -290,4 +278,61 @@ Wire Wire Line
 	7150 3000 6650 3000
 Wire Wire Line
 	6150 3000 5650 3000
+Wire Wire Line
+	6150 3200 5650 3200
+Wire Wire Line
+	6150 2600 5650 2600
+Wire Wire Line
+	7150 2600 6650 2600
+Text HLabel 7100 4600 2    60   Input ~ 0
+FAN_MODE
+$Comp
+L R R?
+U 1 1 52F52688
+P 6400 4600
+F 0 "R?" V 6480 4600 40  0000 C CNN
+F 1 "R" V 6407 4601 40  0000 C CNN
+F 2 "~" V 6330 4600 30  0000 C CNN
+F 3 "~" H 6400 4600 30  0000 C CNN
+	1    6400 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7100 4600 6650 4600
+Wire Wire Line
+	6150 4600 5650 4600
+Wire Wire Line
+	6650 3200 7100 3200
+Wire Wire Line
+	7100 4400 6650 4400
+Wire Wire Line
+	6150 4400 5650 4400
+$Comp
+L R R?
+U 1 1 52F52781
+P 2800 3300
+F 0 "R?" V 2880 3300 40  0000 C CNN
+F 1 "R" V 2807 3301 40  0000 C CNN
+F 2 "~" V 2730 3300 30  0000 C CNN
+F 3 "~" H 2800 3300 30  0000 C CNN
+	1    2800 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +12P #PWR?
+U 1 1 52F52793
+P 2200 3100
+F 0 "#PWR?" H 2200 3070 30  0001 C CNN
+F 1 "+12P" H 2200 3200 30  0000 C CNN
+F 2 "" H 2200 3100 60  0000 C CNN
+F 3 "" H 2200 3100 60  0000 C CNN
+	1    2200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3100 2200 3300
+Wire Wire Line
+	2200 3300 2550 3300
+Wire Wire Line
+	3050 3300 4000 3300
 $EndSCHEMATC
